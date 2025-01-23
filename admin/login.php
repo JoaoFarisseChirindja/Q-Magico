@@ -59,16 +59,17 @@ if(isset($message)){
 <section class="form-container">
 
    <form action="" method="post" enctype="multipart/form-data" class="login">
-      <h3>welcome back!</h3>
-      <p>your email <span>*</span></p>
-      <input type="email" name="email" placeholder="enter your email" maxlength="20" required class="box">
-      <p>your password <span>*</span></p>
-      <input type="password" name="pass" placeholder="enter your password" maxlength="20" required class="box">
-      <p class="link">don't have an account? <a href="register.php">register new</a></p>
-      <input type="submit" name="submit" value="login now" class="btn">
+      <h3>Bem-vindo de volta!</h3>
+      <p>Seu Email <span>*</span></p>
+      <input type="email" name="email" placeholder="Digite seu email" maxlength="20" required class="box">
+      <p>Sua Senha <span>*</span></p>
+      <input type="password" name="pass" placeholder="Digite sua senha" maxlength="20" required class="box">
+      <p class="link">Não tem uma conta? <a href="register.php">Cadastre-se agora</a></p>
+      <input type="submit" name="submit" value="Entrar Agora" class="btn">
    </form>
 
 </section>
+
 
 <!-- registe section ends -->
 

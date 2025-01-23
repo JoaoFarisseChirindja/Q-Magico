@@ -111,15 +111,15 @@ if(isset($_POST['delete_comment'])){
       <form action="" method="post">
          <div class="flex-btn">
             <input type="hidden" name="video_id" value="<?= $video_id; ?>">
-            <a href="update_content.php?get_id=<?= $video_id; ?>" class="option-btn">update</a>
-            <input type="submit" value="delete" class="delete-btn" onclick="return confirm('delete this video?');" name="delete_video">
+            <a href="update_content.php?get_id=<?= $video_id; ?>" class="option-btn">atualizar</a>
+            <input type="submit" value="deletar" class="delete-btn" onclick="return confirm('deletar este vídeo?');" name="delete_video">
          </div>
       </form>
    </div>
    <?php
     }
    }else{
-      echo '<p class="empty">no contents added yet! <a href="add_content.php" class="btn" style="margin-top: 1.5rem;">add videos</a></p>';
+      echo '<p class="empty">nenhum conteúdo adicionado ainda! <a href="add_content.php" class="btn" style="margin-top: 1.5rem;">adicionar vídeos</a></p>';
    }
       
    ?>
@@ -128,7 +128,7 @@ if(isset($_POST['delete_comment'])){
 
 <section class="comments">
 
-   <h1 class="heading">user comments</h1>
+   <h1 class="heading">comentários dos usuários</h1>
 
    
    <div class="show-comments">
@@ -152,16 +152,17 @@ if(isset($_POST['delete_comment'])){
          <p class="text"><?= $fetch_comment['comment']; ?></p>
          <form action="" method="post" class="flex-btn">
             <input type="hidden" name="comment_id" value="<?= $fetch_comment['id']; ?>">
-            <button type="submit" name="delete_comment" class="inline-delete-btn" onclick="return confirm('delete this comment?');">delete comment</button>
+            <button type="submit" name="delete_comment" class="inline-delete-btn" onclick="return confirm('deletar este comentário?');">deletar comentário</button>
          </form>
       </div>
       <?php
        }
       }else{
-         echo '<p class="empty">no comments added yet!</p>';
+         echo '<p class="empty">nenhum comentário adicionado ainda!</p>';
       }
       ?>
       </div>
+
    
 </section>
 

@@ -15,7 +15,9 @@ if(isset($message)){
 
    <section class="flex">
 
-      <a href="dashboard.php" class="logo">Admin.</a>
+   <a href="dashboard.php" class="logo">
+    <img src="images/logo.jpg" alt="Q-Magico logo" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+</a>
 
       <form action="search_page.php" method="post" class="search-form">
          <input type="text" name="search" placeholder="search here..." required maxlength="100">
@@ -96,13 +98,14 @@ if(isset($message)){
          ?>
       </div>
 
-   <nav class="navbar">
-      <a href="dashboard.php"><i class="fas fa-home"></i><span>home</span></a>
-      <a href="playlists.php"><i class="fa-solid fa-bars-staggered"></i><span>playlists</span></a>
-      <a href="contents.php"><i class="fas fa-graduation-cap"></i><span>contents</span></a>
-      <a href="comments.php"><i class="fas fa-comment"></i><span>comments</span></a>
-      <a href="../components/admin_logout.php" onclick="return confirm('logout from this website?');"><i class="fas fa-right-from-bracket"></i><span>logout</span></a>
-   </nav>
+      <nav class="navbar">
+   <a href="dashboard.php"><i class="fas fa-home"></i><span>Início</span></a>
+   <a href="playlists.php"><i class="fa-solid fa-bars-staggered"></i><span>Listas de Reprodução</span></a>
+   <a href="contents.php"><i class="fas fa-graduation-cap"></i><span>Conteúdos</span></a>
+   <a href="comments.php"><i class="fas fa-comment"></i><span>Comentários</span></a>
+   <a href="../components/admin_logout.php" onclick="return confirm('Sair deste site?');"><i class="fas fa-right-from-bracket"></i><span>Sair</span></a>
+</nav>
+
 
 </div>
 

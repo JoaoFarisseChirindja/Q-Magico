@@ -78,43 +78,42 @@ if(isset($message)){
 
 <section class="form-container">
 
-   <form class="register" action="" method="post" enctype="multipart/form-data">
-      <h3>register new</h3>
-      <div class="flex">
-         <div class="col">
-            <p>your name <span>*</span></p>
-            <input type="text" name="name" placeholder="eneter your name" maxlength="50" required class="box">
-            <p>your profession <span>*</span></p>
-            <select name="profession" class="box" required>
-               <option value="" disabled selected>-- select your profession</option>
-               <option value="developer">developer</option>
-               <option value="desginer">desginer</option>
-               <option value="musician">musician</option>
-               <option value="biologist">biologist</option>
-               <option value="teacher">teacher</option>
-               <option value="engineer">engineer</option>
-               <option value="lawyer">lawyer</option>
-               <option value="accountant">accountant</option>
-               <option value="doctor">doctor</option>
-               <option value="journalist">journalist</option>
-               <option value="photographer">photographer</option>
-            </select>
-            <p>your email <span>*</span></p>
-            <input type="email" name="email" placeholder="enter your email" maxlength="20" required class="box">
-         </div>
-         <div class="col">
-            <p>your password <span>*</span></p>
-            <input type="password" name="pass" placeholder="enter your password" maxlength="20" required class="box">
-            <p>confirm password <span>*</span></p>
-            <input type="password" name="cpass" placeholder="confirm your password" maxlength="20" required class="box">
-            <p>select pic <span>*</span></p>
-            <input type="file" name="image" accept="image/*" required class="box">
-         </div>
+<form class="register" action="" method="post" enctype="multipart/form-data">
+   <h3>Registrar Novo</h3>
+   <div class="flex">
+      <div class="col">
+         <p>Seu Nome <span>*</span></p>
+         <input type="text" name="name" placeholder="Digite seu nome" maxlength="50" required class="box">
+         <p>Sua Profissão <span>*</span></p>
+         <select name="profession" class="box" required>
+            <option value="" disabled selected>-- Selecione sua profissão --</option>
+            <option value="developer">Desenvolvedor</option>
+            <option value="designer">Designer</option>
+            <option value="musician">Músico</option>
+            <option value="biologist">Biólogo</option>
+            <option value="teacher">Professor</option>
+            <option value="engineer">Engenheiro</option>
+            <option value="lawyer">Advogado</option>
+            <option value="accountant">Contador</option>
+            <option value="doctor">Médico</option>
+            <option value="journalist">Jornalista</option>
+            <option value="photographer">Fotógrafo</option>
+         </select>
+         <p>Seu Email <span>*</span></p>
+         <input type="email" name="email" placeholder="Digite seu email" maxlength="20" required class="box">
       </div>
-      <p class="link">already have an account? <a href="login.php">login now</a></p>
-      <input type="submit" name="submit" value="register now" class="btn">
-   </form>
-
+      <div class="col">
+         <p>Sua Senha <span>*</span></p>
+         <input type="password" name="pass" placeholder="Digite sua senha" maxlength="20" required class="box">
+         <p>Confirmar Senha <span>*</span></p>
+         <input type="password" name="cpass" placeholder="Confirme sua senha" maxlength="20" required class="box">
+         <p>Selecionar Foto <span>*</span></p>
+         <input type="file" name="image" accept="image/*" required class="box">
+      </div>
+   </div>
+   <p class="link">Já tem uma conta? <a href="login.php">Entrar agora</a></p>
+   <input type="submit" name="submit" value="Registrar Agora" class="btn">
+</form>
 </section>
 
 <!-- registe section ends -->

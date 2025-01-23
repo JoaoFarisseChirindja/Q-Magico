@@ -16,7 +16,7 @@ if(isset($_COOKIE['user_id'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>courses</title>
+   <title>professor</title>
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
@@ -77,7 +77,7 @@ if(isset($_COOKIE['user_id'])){
          <p>playlists : <span><?= $total_playlists; ?></span></p>
          <p>total videos : <span><?= $total_contents ?></span></p>
          <p>total likes : <span><?= $total_likes ?></span></p>
-         <p>total comments : <span><?= $total_comments ?></span></p>
+         <p>total commentarios : <span><?= $total_comments ?></span></p>
          <form action="tutor_profile.php" method="post">
             <input type="hidden" name="tutor_email" value="<?= $fetch_tutor['email']; ?>">
             <input type="submit" value="view profile" name="tutor_fetch" class="inline-btn">

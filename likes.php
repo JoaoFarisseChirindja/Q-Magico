@@ -54,7 +54,7 @@ if(isset($_POST['remove'])){
 
 <section class="liked-videos">
 
-   <h1 class="heading">liked videos</h1>
+   <h1 class="heading"> videos com Like</h1>
 
    <div class="box-container">
 
@@ -86,7 +86,7 @@ if(isset($_POST['remove'])){
       <h3 class="title"><?= $fetch_contents['title']; ?></h3>
       <form action="" method="post" class="flex-btn">
          <input type="hidden" name="content_id" value="<?= $fetch_contents['id']; ?>">
-         <a href="watch_video.php?get_id=<?= $fetch_contents['id']; ?>" class="inline-btn">watch video</a>
+         <a href="watch_video.php?get_id=<?= $fetch_contents['id']; ?>" class="inline-btn">Assistir ao Video</a>
          <input type="submit" value="remove" class="inline-delete-btn" name="remove">
       </form>
    </div>

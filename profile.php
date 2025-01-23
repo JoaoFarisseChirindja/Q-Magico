@@ -44,7 +44,7 @@ $total_bookmarked = $select_bookmark->rowCount();
 
 <section class="profile">
 
-   <h1 class="heading">profile details</h1>
+   <h1 class="heading">Datalhes do perfil</h1>
 
    <div class="details">
 
@@ -52,7 +52,7 @@ $total_bookmarked = $select_bookmark->rowCount();
          <img src="uploaded_files/<?= $fetch_profile['image']; ?>" alt="">
          <h3><?= $fetch_profile['name']; ?></h3>
          <p>student</p>
-         <a href="update.php" class="inline-btn">update profile</a>
+         <a href="update.php" class="inline-btn">Actualizar Perfil</a>
       </div>
 
       <div class="box-container">
@@ -62,10 +62,10 @@ $total_bookmarked = $select_bookmark->rowCount();
                <i class="fas fa-bookmark"></i>
                <div>
                   <h3><?= $total_bookmarked; ?></h3>
-                  <span>saved playlists</span>
+                  <span>Playlist guardadas</span>
                </div>
             </div>
-            <a href="#" class="inline-btn">view playlists</a>
+            <a href="#" class="inline-btn">ver playlists</a>
          </div>
 
          <div class="box">
@@ -73,10 +73,10 @@ $total_bookmarked = $select_bookmark->rowCount();
                <i class="fas fa-heart"></i>
                <div>
                   <h3><?= $total_likes; ?></h3>
-                  <span>liked tutorials</span>
+                  <span>Tutoriais com gosto</span>
                </div>
             </div>
-            <a href="#" class="inline-btn">view liked</a>
+            <a href="#" class="inline-btn">ver gostos</a>
          </div>
 
          <div class="box">
@@ -84,10 +84,10 @@ $total_bookmarked = $select_bookmark->rowCount();
                <i class="fas fa-comment"></i>
                <div>
                   <h3><?= $total_comments; ?></h3>
-                  <span>video comments</span>
+                  <span>videos comentados</span>
                </div>
             </div>
-            <a href="#" class="inline-btn">view comments</a>
+            <a href="#" class="inline-btn">ver comentarios</a>
          </div>
 
       </div>

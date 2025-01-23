@@ -64,29 +64,29 @@ if(isset($_POST['tutor_fetch'])){
 
 <section class="tutor-profile">
 
-   <h1 class="heading">profile details</h1>
+<h1 class="heading">detalhes do perfil</h1>
 
-   <div class="details">
-      <div class="tutor">
-         <img src="uploaded_files/<?= $fetch_tutor['image']; ?>" alt="">
-         <h3><?= $fetch_tutor['name']; ?></h3>
-         <span><?= $fetch_tutor['profession']; ?></span>
-      </div>
-      <div class="flex">
-         <p>total playlists : <span><?= $total_playlists; ?></span></p>
-         <p>total videos : <span><?= $total_contents; ?></span></p>
-         <p>total likes : <span><?= $total_likes; ?></span></p>
-         <p>total comments : <span><?= $total_comments; ?></span></p>
-      </div>
+<div class="details">
+   <div class="tutor">
+      <img src="uploaded_files/<?= $fetch_tutor['image']; ?>" alt="">
+      <h3><?= $fetch_tutor['name']; ?></h3>
+      <span><?= $fetch_tutor['profession']; ?></span>
    </div>
+   <div class="flex">
+      <p>total de playlists : <span><?= $total_playlists; ?></span></p>
+      <p>total de vídeos : <span><?= $total_contents; ?></span></p>
+      <p>total de likes : <span><?= $total_likes; ?></span></p>
+      <p>total de comentários : <span><?= $total_comments; ?></span></p>
+   </div>
+</div>
 
 </section>
 
-<!-- teachers profile section ends -->
+<!-- seção de perfil dos professores termina -->
 
 <section class="courses">
 
-   <h1 class="heading">latest courese</h1>
+   <h1 class="heading">últimos cursos</h1>
 
    <div class="box-container">
 
@@ -111,12 +111,20 @@ if(isset($_POST['tutor_fetch'])){
          </div>
          <img src="uploaded_files/<?= $fetch_course['thumb']; ?>" class="thumb" alt="">
          <h3 class="title"><?= $fetch_course['title']; ?></h3>
-         <a href="playlist.php?get_id=<?= $course_id; ?>" class="inline-btn">view playlist</a>
+         <a href="playlist.php?get_id=<?= $course_id; ?>" class="inline-btn">ver playlist</a>
       </div>
       <?php
          }
+      } else {
+         echo '<p>nenhum curso encontrado.</p>';
+      }
+      ?>
+   </div>
+</section>
+
+         }
       }else{
-         echo '<p class="empty">no courses added yet!</p>';
+         echo '<p class="empty">nenhum curso adicionado de momento!</p>';
       }
       ?>
 

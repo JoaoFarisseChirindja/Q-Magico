@@ -123,44 +123,45 @@ if(isset($_POST['submit'])){
 <section class="form-container" style="min-height: calc(100vh - 19rem);">
 
    <form class="register" action="" method="post" enctype="multipart/form-data">
-      <h3>update profile</h3>
+      <h3>atualizar perfil</h3>
       <div class="flex">
          <div class="col">
-            <p>your name </p>
+            <p>seu nome </p>
             <input type="text" name="name" placeholder="<?= $fetch_profile['name']; ?>" maxlength="50"  class="box">
-            <p>your profession </p>
+            <p>sua profissão </p>
             <select name="profession" class="box">
                <option value="" selected><?= $fetch_profile['profession']; ?></option>
-               <option value="developer">developer</option>
-               <option value="desginer">desginer</option>
-               <option value="musician">musician</option>
-               <option value="biologist">biologist</option>
-               <option value="teacher">teacher</option>
-               <option value="engineer">engineer</option>
-               <option value="lawyer">lawyer</option>
-               <option value="accountant">accountant</option>
-               <option value="doctor">doctor</option>
-               <option value="journalist">journalist</option>
-               <option value="photographer">photographer</option>
+               <option value="developer">desenvolvedor</option>
+               <option value="desginer">designer</option>
+               <option value="musician">músico</option>
+               <option value="biologist">biólogo</option>
+               <option value="teacher">professor</option>
+               <option value="engineer">engenheiro</option>
+               <option value="lawyer">advogado</option>
+               <option value="accountant">contador</option>
+               <option value="doctor">médico</option>
+               <option value="journalist">jornalista</option>
+               <option value="photographer">fotógrafo</option>
             </select>
-            <p>your email </p>
+            <p>seu e-mail </p>
             <input type="email" name="email" placeholder="<?= $fetch_profile['email']; ?>" maxlength="20"  class="box">
          </div>
          <div class="col">
-            <p>old password :</p>
-            <input type="password" name="old_pass" placeholder="enter your old password" maxlength="20"  class="box">
-            <p>new password :</p>
-            <input type="password" name="new_pass" placeholder="enter your new password" maxlength="20"  class="box">
-            <p>confirm password :</p>
-            <input type="password" name="cpass" placeholder="confirm your new password" maxlength="20"  class="box">
+            <p>senha antiga :</p>
+            <input type="password" name="old_pass" placeholder="digite sua senha antiga" maxlength="20"  class="box">
+            <p>nova senha :</p>
+            <input type="password" name="new_pass" placeholder="digite sua nova senha" maxlength="20"  class="box">
+            <p>confirmar senha :</p>
+            <input type="password" name="cpass" placeholder="confirme sua nova senha" maxlength="20"  class="box">
          </div>
       </div>
-      <p>update pic :</p>
+      <p>atualizar foto :</p>
       <input type="file" name="image" accept="image/*"  class="box">
-      <input type="submit" name="submit" value="update now" class="btn">
+      <input type="submit" name="submit" value="atualizar agora" class="btn">
    </form>
 
 </section>
+
 
 <!-- registe section ends -->
 

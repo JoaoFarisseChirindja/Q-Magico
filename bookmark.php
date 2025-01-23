@@ -32,7 +32,7 @@ if(isset($_COOKIE['user_id'])){
 
 <section class="courses">
 
-   <h1 class="heading">bookmarked playlists</h1>
+   <h1 class="heading"> playlists marcadas </h1>
 
    <div class="box-container">
 
@@ -62,7 +62,7 @@ if(isset($_COOKIE['user_id'])){
          </div>
          <img src="uploaded_files/<?= $fetch_course['thumb']; ?>" class="thumb" alt="">
          <h3 class="title"><?= $fetch_course['title']; ?></h3>
-         <a href="playlist.php?get_id=<?= $course_id; ?>" class="inline-btn">view playlist</a>
+         <a href="playlist.php?get_id=<?= $course_id; ?>" class="inline-btn">ver playlist</a>
       </div>
       <?php
                }

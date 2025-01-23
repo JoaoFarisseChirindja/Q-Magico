@@ -49,38 +49,42 @@ if(isset($_POST['delete_comment'])){
 <?php include '../components/admin_header.php'; ?>
    
 
-<section class="comments">
+<<section class="comments">
 
-   <h1 class="heading">user comments</h1>
+<h1 class="heading">Comentários dos Usuários</h1>
 
-   
-   <div class="show-comments">
-      <?php
-         $select_comments = $conn->prepare("SELECT * FROM `comments` WHERE tutor_id = ?");
-         $select_comments->execute([$tutor_id]);
-         if($select_comments->rowCount() > 0){
-            while($fetch_comment = $select_comments->fetch(PDO::FETCH_ASSOC)){
-               $select_content = $conn->prepare("SELECT * FROM `content` WHERE id = ?");
-               $select_content->execute([$fetch_comment['content_id']]);
-               $fetch_content = $select_content->fetch(PDO::FETCH_ASSOC);
-      ?>
-      <div class="box" style="<?php if($fetch_comment['tutor_id'] == $tutor_id){echo 'order:-1;';} ?>">
-         <div class="content"><span><?= $fetch_comment['date']; ?></span><p> - <?= $fetch_content['title']; ?> - </p><a href="view_content.php?get_id=<?= $fetch_content['id']; ?>">view content</a></div>
-         <p class="text"><?= $fetch_comment['comment']; ?></p>
-         <form action="" method="post">
-            <input type="hidden" name="comment_id" value="<?= $fetch_comment['id']; ?>">
-            <button type="submit" name="delete_comment" class="inline-delete-btn" onclick="return confirm('delete this comment?');">delete comment</button>
-         </form>
+<div class="show-comments">
+   <?php
+      $select_comments = $conn->prepare("SELECT * FROM `comments` WHERE tutor_id = ?");
+      $select_comments->execute([$tutor_id]);
+      if($select_comments->rowCount() > 0){
+         while($fetch_comment = $select_comments->fetch(PDO::FETCH_ASSOC)){
+            $select_content = $conn->prepare("SELECT * FROM `content` WHERE id = ?");
+            $select_content->execute([$fetch_comment['content_id']]);
+            $fetch_content = $select_content->fetch(PDO::FETCH_ASSOC);
+   ?>
+   <div class="box" style="<?php if($fetch_comment['tutor_id'] == $tutor_id){echo 'order:-1;';} ?>">
+      <div class="content">
+         <span><?= $fetch_comment['date']; ?></span>
+         <p> - <?= $fetch_content['title']; ?> - </p>
+         <a href="view_content.php?get_id=<?= $fetch_content['id']; ?>">Visualizar Conteúdo</a>
       </div>
-      <?php
-       }
-      }else{
-         echo '<p class="empty">no comments added yet!</p>';
-      }
-      ?>
-      </div>
-   
+      <p class="text"><?= $fetch_comment['comment']; ?></p>
+      <form action="" method="post">
+         <input type="hidden" name="comment_id" value="<?= $fetch_comment['id']; ?>">
+         <button type="submit" name="delete_comment" class="inline-delete-btn" onclick="return confirm('Excluir este comentário?');">Excluir Comentário</button>
+      </form>
+   </div>
+   <?php
+    }
+   }else{
+      echo '<p class="empty">Nenhum comentário adicionado ainda!</p>';
+   }
+   ?>
+</div>
+
 </section>
+
 
 
 

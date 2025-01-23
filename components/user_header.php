@@ -15,7 +15,12 @@ if(isset($message)){
 
    <section class="flex">
 
-      <a href="home.php" class="logo">Educa.</a>
+   <a href="home.php" class="logo">
+    <img src="images/logo.jpg" alt="Q-Magico logo" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+</a>
+
+
+
 
       <form action="search_course.php" method="post" class="search-form">
          <input type="text" name="search_course" placeholder="search courses..." required maxlength="100">
@@ -81,8 +86,8 @@ if(isset($message)){
          ?>
          <img src="uploaded_files/<?= $fetch_profile['image']; ?>" alt="">
          <h3><?= $fetch_profile['name']; ?></h3>
-         <span>student</span>
-         <a href="profile.php" class="btn">view profile</a>
+         <span>Xadrezista</span>
+         <a href="profile.php" class="btn">ver perfil</a>
          <?php
             }else{
          ?>
@@ -96,13 +101,14 @@ if(isset($message)){
          ?>
       </div>
 
-   <nav class="navbar">
-      <a href="home.php"><i class="fas fa-home"></i><span>home</span></a>
-      <a href="about.php"><i class="fas fa-question"></i><span>about us</span></a>
-      <a href="courses.php"><i class="fas fa-graduation-cap"></i><span>courses</span></a>
-      <a href="teachers.php"><i class="fas fa-chalkboard-user"></i><span>teachers</span></a>
-      <a href="contact.php"><i class="fas fa-headset"></i><span>contact us</span></a>
-   </nav>
+      <nav class="navbar">
+   <a href="home.php"><i class="fas fa-home"></i><span>Início</span></a>
+   <a href="about.php"><i class="fas fa-question"></i><span>Sobre nós</span></a>
+   <a href="courses.php"><i class="fas fa-graduation-cap"></i><span>Cursos</span></a>
+   <a href="teachers.php"><i class="fas fa-chalkboard-user"></i><span>Professores</span></a>
+   <a href="contact.php"><i class="fas fa-headset"></i><span>Contato</span></a>
+</nav>
+
 
 </div>
 

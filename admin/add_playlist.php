@@ -59,23 +59,24 @@ if(isset($_POST['submit'])){
    
 <section class="playlist-form">
 
-   <h1 class="heading">create playlist</h1>
+<h1 class="heading">Criar Playlist</h1>
 
-   <form action="" method="post" enctype="multipart/form-data">
-      <p>playlist status <span>*</span></p>
-      <select name="status" class="box" required>
-         <option value="" selected disabled>-- select status</option>
-         <option value="active">active</option>
-         <option value="deactive">deactive</option>
-      </select>
-      <p>playlist title <span>*</span></p>
-      <input type="text" name="title" maxlength="100" required placeholder="enter playlist title" class="box">
-      <p>playlist description <span>*</span></p>
-      <textarea name="description" class="box" required placeholder="write description" maxlength="1000" cols="30" rows="10"></textarea>
-      <p>playlist thumbnail <span>*</span></p>
-      <input type="file" name="image" accept="image/*" required class="box">
-      <input type="submit" value="create playlist" name="submit" class="btn">
-   </form>
+<form action="" method="post" enctype="multipart/form-data">
+   <p>Status da Playlist <span>*</span></p>
+   <select name="status" class="box" required>
+      <option value="" selected disabled>-- Selecione o status</option>
+      <option value="active">Ativa</option>
+      <option value="deactive">Inativa</option>
+   </select>
+   <p>Título da Playlist <span>*</span></p>
+   <input type="text" name="title" maxlength="100" required placeholder="Digite o título da playlist" class="box">
+   <p>Descrição da Playlist <span>*</span></p>
+   <textarea name="description" class="box" required placeholder="Escreva a descrição" maxlength="1000" cols="30" rows="10"></textarea>
+   <p>Miniatura da Playlist <span>*</span></p>
+   <input type="file" name="image" accept="image/*" required class="box">
+   <input type="submit" value="Criar Playlist" name="submit" class="btn">
+</form>
+
 
 </section>
 

@@ -55,19 +55,18 @@ if(isset($_POST['submit'])){
 }
 
 ?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>home</title>
+   <title>Início</title>
 
-   <!-- font awesome cdn link  -->
+   <!-- Link para o Font Awesome -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
-   <!-- custom css file link  -->
+   <!-- Link para o arquivo CSS personalizado -->
    <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -78,43 +77,32 @@ if(isset($_POST['submit'])){
 <section class="form-container">
 
    <form class="register" action="" method="post" enctype="multipart/form-data">
-      <h3>create account</h3>
+      <h3>criar conta</h3>
       <div class="flex">
          <div class="col">
-            <p>your name <span>*</span></p>
-            <input type="text" name="name" placeholder="eneter your name" maxlength="50" required class="box">
-            <p>your email <span>*</span></p>
-            <input type="email" name="email" placeholder="enter your email" maxlength="20" required class="box">
+            <p>seu nome <span>*</span></p>
+            <input type="text" name="name" placeholder="insira seu nome" maxlength="50" required class="box">
+            <p>seu email <span>*</span></p>
+            <input type="email" name="email" placeholder="insira seu email" maxlength="20" required class="box">
          </div>
          <div class="col">
-            <p>your password <span>*</span></p>
-            <input type="password" name="pass" placeholder="enter your password" maxlength="20" required class="box">
-            <p>confirm password <span>*</span></p>
-            <input type="password" name="cpass" placeholder="confirm your password" maxlength="20" required class="box">
+            <p>sua senha <span>*</span></p>
+            <input type="password" name="pass" placeholder="insira sua senha" maxlength="20" required class="box">
+            <p>confirme sua senha <span>*</span></p>
+            <input type="password" name="cpass" placeholder="confirme sua senha" maxlength="20" required class="box">
          </div>
       </div>
-      <p>select pic <span>*</span></p>
+      <p>selecione uma foto <span>*</span></p>
       <input type="file" name="image" accept="image/*" required class="box">
-      <p class="link">already have an account? <a href="login.php">login now</a></p>
-      <input type="submit" name="submit" value="register now" class="btn">
+      <p class="link">já possui uma conta? <a href="login.php">faça login agora</a></p>
+      <input type="submit" name="submit" value="registrar agora" class="btn">
    </form>
 
 </section>
 
-
-
-
-
-
-
-
-
-
-
-
 <?php include 'components/footer.php'; ?>
 
-<!-- custom js file link  -->
+<!-- Link para o arquivo JS personalizado -->
 <script src="js/script.js"></script>
    
 </body>

@@ -48,38 +48,39 @@
    
 <section class="tutor-profile" style="min-height: calc(100vh - 19rem);"> 
 
-   <h1 class="heading">profile details</h1>
+<h1 class="heading">Detalhes do Perfil</h1>
 
-   <div class="details">
-      <div class="tutor">
-         <img src="../uploaded_files/<?= $fetch_profile['image']; ?>" alt="">
-         <h3><?= $fetch_profile['name']; ?></h3>
-         <span><?= $fetch_profile['profession']; ?></span>
-         <a href="update.php" class="inline-btn">update profile</a>
+<div class="details">
+   <div class="tutor">
+      <img src="../uploaded_files/<?= $fetch_profile['image']; ?>" alt="">
+      <h3><?= $fetch_profile['name']; ?></h3>
+      <span><?= $fetch_profile['profession']; ?></span>
+      <a href="update.php" class="inline-btn">Atualizar Perfil</a>
+   </div>
+   <div class="flex">
+      <div class="box">
+         <span><?= $total_playlists; ?></span>
+         <p>Total de Playlists</p>
+         <a href="playlists.php" class="btn">Ver Playlists</a>
       </div>
-      <div class="flex">
-         <div class="box">
-            <span><?= $total_playlists; ?></span>
-            <p>total playlists</p>
-            <a href="playlists.php" class="btn">view playlists</a>
-         </div>
-         <div class="box">
-            <span><?= $total_contents; ?></span>
-            <p>total videos</p>
-            <a href="contents.php" class="btn">view contents</a>
-         </div>
-         <div class="box">
-            <span><?= $total_likes; ?></span>
-            <p>total likes</p>
-            <a href="contents.php" class="btn">view contents</a>
-         </div>
-         <div class="box">
-            <span><?= $total_comments; ?></span>
-            <p>total comments</p>
-            <a href="comments.php" class="btn">view comments</a>
-         </div>
+      <div class="box">
+         <span><?= $total_contents; ?></span>
+         <p>Total de Vídeos</p>
+         <a href="contents.php" class="btn">Ver Vídeos</a>
+      </div>
+      <div class="box">
+         <span><?= $total_likes; ?></span>
+         <p>Total de Likes</p>
+         <a href="contents.php" class="btn">Ver Vídeos</a>
+      </div>
+      <div class="box">
+         <span><?= $total_comments; ?></span>
+         <p>Total de Comentários</p>
+         <a href="comments.php" class="btn">Ver Comentários</a>
       </div>
    </div>
+</div>
+
 
 </section>
 

@@ -120,41 +120,42 @@ if(isset($_POST['delete_video'])){
 
 <section class="contents">
 
-   <h1 class="heading">playlist videos</h1>
+<h1 class="heading">vídeos da playlist</h1>
 
-   <div class="box-container">
+<div class="box-container">
 
-   <?php
-      $select_videos = $conn->prepare("SELECT * FROM `content` WHERE tutor_id = ? AND playlist_id = ?");
-      $select_videos->execute([$tutor_id, $playlist_id]);
-      if($select_videos->rowCount() > 0){
-         while($fecth_videos = $select_videos->fetch(PDO::FETCH_ASSOC)){ 
-            $video_id = $fecth_videos['id'];
-   ?>
-      <div class="box">
-         <div class="flex">
-            <div><i class="fas fa-dot-circle" style="<?php if($fecth_videos['status'] == 'active'){echo 'color:limegreen'; }else{echo 'color:red';} ?>"></i><span style="<?php if($fecth_videos['status'] == 'active'){echo 'color:limegreen'; }else{echo 'color:red';} ?>"><?= $fecth_videos['status']; ?></span></div>
-            <div><i class="fas fa-calendar"></i><span><?= $fecth_videos['date']; ?></span></div>
-         </div>
-         <img src="../uploaded_files/<?= $fecth_videos['thumb']; ?>" class="thumb" alt="">
-         <h3 class="title"><?= $fecth_videos['title']; ?></h3>
-         <form action="" method="post" class="flex-btn">
-            <input type="hidden" name="video_id" value="<?= $video_id; ?>">
-            <a href="update_content.php?get_id=<?= $video_id; ?>" class="option-btn">update</a>
-            <input type="submit" value="delete" class="delete-btn" onclick="return confirm('delete this video?');" name="delete_video">
-         </form>
-         <a href="view_content.php?get_id=<?= $video_id; ?>" class="btn">watch video</a>
+<?php
+   $select_videos = $conn->prepare("SELECT * FROM `content` WHERE tutor_id = ? AND playlist_id = ?");
+   $select_videos->execute([$tutor_id, $playlist_id]);
+   if($select_videos->rowCount() > 0){
+      while($fecth_videos = $select_videos->fetch(PDO::FETCH_ASSOC)){ 
+         $video_id = $fecth_videos['id'];
+?>
+   <div class="box">
+      <div class="flex">
+         <div><i class="fas fa-dot-circle" style="<?php if($fecth_videos['status'] == 'active'){echo 'color:limegreen'; }else{echo 'color:red';} ?>"></i><span style="<?php if($fecth_videos['status'] == 'active'){echo 'color:limegreen'; }else{echo 'color:red';} ?>"><?= $fecth_videos['status']; ?></span></div>
+         <div><i class="fas fa-calendar"></i><span><?= $fecth_videos['date']; ?></span></div>
       </div>
-   <?php
-         }
-      }else{
-         echo '<p class="empty">no videos added yet! <a href="add_content.php" class="btn" style="margin-top: 1.5rem;">add videos</a></p>';
-      }
-   ?>
-
+      <img src="../uploaded_files/<?= $fecth_videos['thumb']; ?>" class="thumb" alt="">
+      <h3 class="title"><?= $fecth_videos['title']; ?></h3>
+      <form action="" method="post" class="flex-btn">
+         <input type="hidden" name="video_id" value="<?= $video_id; ?>">
+         <a href="update_content.php?get_id=<?= $video_id; ?>" class="option-btn">atualizar</a>
+         <input type="submit" value="deletar" class="delete-btn" onclick="return confirm('deletar este vídeo?');" name="delete_video">
+      </form>
+      <a href="view_content.php?get_id=<?= $video_id; ?>" class="btn">assistir vídeo</a>
    </div>
+<?php
+      }
+   }else{
+      echo '<p class="empty">nenhum vídeo adicionado ainda! <a href="add_content.php" class="btn" style="margin-top: 1.5rem;">adicionar vídeos</a></p>';
+   }
+?>
+
+</div>
 
 </section>
+
 
 
 
